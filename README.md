@@ -5,6 +5,7 @@
 - HTML
 - CSS
 - JavaScript
+- JSON Server
 
 ### Site disponível em:
 - 
