@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciador de Tarefas</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header>
+    <input type="text" id="busca" onkeyup="pesquisarTarefa()" placeholder="Pesquisar por título">
+  </header>
+  <main>
+    <section id="tarefas">
+      <h2>
+        Tarefas 
+        <button onclick="abrirModal()">Nova tarefa</button>
+      </h2>
+      <ul class="lista" id="listaTarefas">
+        <!-- As tarefas serão adicionadas aqui -->
+      </ul>
+    </section>
+
+    <section id="overlay" onclick="fecharModal()"></section>
+
+    <div id="criarTarefa" class="modal">
+      <form onsubmit="novaTarefa(event)">
+        <h3>
+          Criar tarefa 
+          <box-icon name='x' size='md' onclick="fecharModal()"></box-icon>
+        </h3>
+        <label for="titulo">Título</label>
+        <input type="text" id="titulo" required>
+        <label for="descricao">Descrição</label>
+        <textarea id="descricao" required></textarea>
+        <button type="submit">Criar</button>
+      </form>
+    </div>
+  </main>
+  <script src="index.js"></script>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+</html>
